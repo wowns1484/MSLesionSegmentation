@@ -1,0 +1,14 @@
+scipy
+numpy
+torch
+torchvision
+torchaudio
+nibabel
+tensorboard
+torchsummary
+torchnet
+matplotlib
+Pillow
+torchsummaryX
+torchio
+tqdm
