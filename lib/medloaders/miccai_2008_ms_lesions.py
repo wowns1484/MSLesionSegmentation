@@ -225,14 +225,14 @@ class MICCAI2008MSLESIONS(Dataset):
     def __getitem__(self, index):
         if self.train_mode == 'train' or self.train_mode == 'val':
             flair_path, mprage_path, pdw_path, t2w_path, mask_path = self.list[index]
-            # flair = torch.load(flair_path)
+            flair = torch.load(flair_path)
             # mprage = torch.load(mprage_path)
             # pdw = torch.load(pdw_path)
-            t2w = torch.load(t2w_path)
+            # t2w = torch.load(t2w_path)
             mask = torch.load(mask_path).float()
 
             # return flair,mprage,pdw,t2w,mask
-            return t2w, mask
+            return flair, mask
 
         elif self.train_mode == 'test':
             flair_path, mprage_path, pdw_path, t2w_path = self.list[index]
